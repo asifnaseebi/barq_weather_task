@@ -1,0 +1,7 @@
+Sir I have searched nano its very good even better than vim
+And I learned various commands from him, the best thing was that there is no need to remember his commands, everything is shown in front.
+Switching from one file to another is easy۔
+for cut txt = ctrl + k
+for undo  = alt + u
+save the file = ctrl + x
+There is much more to it than that.

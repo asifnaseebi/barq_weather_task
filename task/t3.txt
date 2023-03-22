@@ -1,0 +1,8 @@
+Sir I searched vim editor very nice
+And for it, I learned different commands
+
+start typing press I
+save changes and exit = :wq
+save change =           :w
+without saving changes =:q!
+for undo = u
