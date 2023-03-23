@@ -1,10 +1,14 @@
-from utils.reader import file_read
+from utils.contents import MapperIndex
+from utils.reader import read_csv_file
 
-file_content = file_read( "/home/asif/Desktop/project/barq_weather_task/files/f1.csv")
-for row in file_content:
-    date = row[0]
-    max_tmp = row[1]
-    min_tmp = row[3]
-    max_min_diff = int(max_tmp) - int(min_tmp)
-    average = max_min_diff/2
-    print(date,"max and mini average =", average )
+file_path = "/home/asif/Desktop/project/barq_weather_task/files/f1.csv"
+csv_data = read_csv_file(file_path)
+
+for content in csv_data:
+    date = content[MapperIndex.DATE]
+    max_temperature = float(content[MapperIndex.MAX_TEMPERATURE])
+    min_temperature = float(content[MapperIndex.MIN_TEMPERATURE])
+    max_min_difference = int(max_temperature) - int(min_temperature)
+    average = max_min_difference/2
+
+    print(date, "max and mini average =", average)
