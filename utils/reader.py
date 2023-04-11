@@ -1,10 +1,11 @@
-import os
+def read_csv_file(file_path):
+    file_contents = []
 
-def file_read(file_content):
-    with open(file_content) as read_content:
-        content = read_content.read()
-    rows = []
-    for row in content.split("\n")[1:-1]:
-        rows.append(row.split(","))
+    with open(file_path, "r") as file_reader:
+        content = file_reader.read()
 
-    return rows
+        for line_value in content.split("\n")[1:-1]:
+            column_values = line_value.split(",")
+            file_contents.append(column_values)
+
+    return file_contents
